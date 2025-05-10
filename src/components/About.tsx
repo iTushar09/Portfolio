@@ -8,7 +8,14 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="w-full md:w-1/2 order-2 md:order-1">
+            {/* Text Content */}
+            <motion.article
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="w-full md:w-1/2 order-2 md:order-1"
+            >
               <h2 className="text-3xl font-bold mb-6 text-white">
                 About <span className="text-purple-400">Me</span>
               </h2>
@@ -21,7 +28,7 @@ const About: React.FC = () => {
               <p className="text-gray-300 mb-4">
                 My expertise includes electronic circuit design, PCB design, and
                 microcontroller programming. I have hands-on experience with
-                tools such as DMM, Oscilloscope, KiCad, MATLAB, Keil μVision,
+                tools such as DMM, Oscilloscope, KiCad, MATLAB, Keil µVision,
                 and Proteus.
               </p>
               <p className="text-gray-300 mb-6">
@@ -37,51 +44,42 @@ const About: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
                 <div className="flex items-center gap-2">
                   <Check size={20} className="text-teal-400" />
-                  <span className="text-gray-300">
-                    Circuit Design & Analysis
-                  </span>
+                  <span className="text-gray-300">Circuit Design & Analysis</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check size={20} className="text-teal-400" />
-                  <span className="text-gray-300">
-                    PCB Design & Prototyping
-                  </span>
+                  <span className="text-gray-300">PCB Design & Prototyping</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check size={20} className="text-teal-400" />
-                  <span className="text-gray-300">
-                    Microcontroller Programming
-                  </span>
+                  <span className="text-gray-300">Microcontroller Programming</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check size={20} className="text-teal-400" />
-                  <span className="text-gray-300">
-                    Test & Measurement Equipment
-                  </span>
+                  <span className="text-gray-300">Test & Measurement Equipment</span>
                 </div>
               </div>
-            </div>
+            </motion.article>
 
+            {/* Image Section */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="w-full md:w-1/2 order-2 md:order-1"
+              className="w-full md:w-1/2 order-1 md:order-2"
             >
               <div className="rounded-xl overflow-hidden border-4 border-purple-700/30 shadow-xl shadow-purple-500/30 relative">
                 <div className="bg-gradient-to-r from-purple-900/60 to-teal-800/60 p-6 md:p-10 aspect-square flex items-center justify-center">
                   <div className="relative w-full h-full max-w-[34rem] max-h-[34rem] flex items-center justify-center">
                     <div className="absolute w-[65%] bg-black/50 backdrop-blur-sm px-4 md:px-6 py-6 md:py-8 rounded-xl text-center flex flex-col items-center">
                       <img
-                        src="https://drive.google.com/uc?export=view&id=1hwRM_hg8QJJ5NH89e5kTaMNt2bQnVmW5"
-                        
-                        className="w-26 h-26 md:w-42 md:h-42 object-cover border-2 border-teal-400 shadow-lg rounded-lg mb-4"
-                      />
+                        src="https://pbs.twimg.com/profile_images/1921307943510675457/pyAsvuFZ_400x400.jpg"
+                          className="w-26 h-26 md:w-42 md:h-42 object-cover border-2 border-teal-400 shadow-lg rounded-lg mb-4"  />
                     </div>
-
                     <div className="absolute w-full h-full border-4 border-teal-400/30 rounded-lg"></div>
                     <div className="absolute w-[93%] h-[93%] border-4 border-purple-400/30 rounded-lg"></div>
+                    <div className="absolute w-[85%] h-[85%] border-4 border-teal-400/30 rounded-lg"></div>
                   </div>
                 </div>
               </div>
