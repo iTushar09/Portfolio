@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, CircuitBoard } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Menu, X, CircuitBoard } from "lucide-react";
 
 type NavLink = {
   name: string;
@@ -7,11 +7,11 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Education', href: '#education' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Education", href: "#education" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
 ];
 
 const Header: React.FC = () => {
@@ -27,25 +27,23 @@ const Header: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-black/80 backdrop-blur-md shadow-md'
-          : 'bg-transparent'
+        scrolled ? "bg-black/80 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-2 text-purple-400">
           <CircuitBoard size={28} />
-          <span className="text-xl font-semibold hidden sm:block">Portfolio</span>
+          <span className="text-xl font-semibold sm:block">Tusharfolio</span>
         </a>
 
         {/* Desktop Navigation */}

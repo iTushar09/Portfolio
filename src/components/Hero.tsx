@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { CircuitBoard } from 'lucide-react';
+import React, { useEffect, useRef } from "react";
+import { CircuitBoard } from "lucide-react";
 
 const Hero: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -8,11 +8,11 @@ const Hero: React.FC = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     let animationFrameId: number;
-    
+
     // Make canvas size match its display size
     const resizeCanvas = () => {
       const { width, height } = canvas.getBoundingClientRect();
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
       canvas.height = height;
     };
 
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
 
     // Particles setup
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
       vy: number;
     }> = [];
 
-    const colors = ['#9333ea', '#7928ca', '#14b8a6', '#38bdf8'];
+    const colors = ["#9333ea", "#7928ca", "#14b8a6", "#38bdf8"];
 
     // Create particles
     for (let i = 0; i < 50; i++) {
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -94,16 +94,13 @@ const Hero: React.FC = () => {
               <CircuitBoard size={48} className="text-purple-400" />
             </div>
           </div>
-          <p className="text-xl text-gray-300 mb-8">
-            Hi, I’m 
-              </p>
+          <p className="text-xl text-gray-300 mb-8">Hi, I’m</p>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-teal-400">
-            
-      Tushar Chaudhri
+            Tushar Chaudhri
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-           
-Electronics & Telecommunication Engineering Student | PCB Design Enthusiast | Embedded Systems Developer
+            Electronics & Telecommunication Engineering Student | PCB Design
+            Enthusiast | Embedded Systems Developer
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -113,10 +110,11 @@ Electronics & Telecommunication Engineering Student | PCB Design Enthusiast | Em
               View Projects
             </a>
             <a
-              href="#about"
+              href="/2022bec037_TusharChaudhari_Entc.pdf"
+              download
               className="px-6 py-3 bg-transparent border border-purple-400 rounded-full text-purple-400 font-semibold hover:bg-purple-900/30 transition-colors"
             >
-              Learn More
+              Download Resume
             </a>
           </div>
         </div>

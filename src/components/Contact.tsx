@@ -22,13 +22,13 @@ const Contact: React.FC = () => {
           <div className="bg-black/50 p-6 rounded-lg border border-purple-900/30 text-center">
             <Phone className="w-8 h-8 text-teal-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-            <p className="text-gray-400">+91 7821848265</p>
+            <p className="text-gray-400">+91-782-184-8265</p>
           </div>
 
           <div className="bg-black/50 p-6 rounded-lg border border-purple-900/30 text-center">
             <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Location</h3>
-            <p className="text-gray-400">Nanded, Maharashtra</p>
+            <p className="text-gray-400">Maharashtra</p>
           </div>
         </div>
 

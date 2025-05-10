@@ -1,5 +1,11 @@
-import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink, CircuitBoard } from 'lucide-react';
+import React from "react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  CircuitBoard,
+} from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +16,9 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-6 md:mb-0">
             <CircuitBoard size={24} className="text-purple-400 mr-2" />
-            <span className="text-white font-semibold text-lg">Portfolio</span>
+            <span className="text-white font-semibold text-lg">
+              Tusharfolio
+            </span>
           </div>
 
           <div className="flex space-x-4 mb-6 md:mb-0">
@@ -29,7 +37,7 @@ const Footer: React.FC = () => {
               <Linkedin size={18} />
             </a>
             <a
-              href="tusharchaudhari1809@gmail.com"
+              href="mailto:tusharchaudhari1809@gmail.com"
               className="w-10 h-10 rounded-full bg-purple-900/30 flex items-center justify-center text-white hover:bg-purple-700 transition-colors"
               aria-label="Email"
             >
@@ -45,8 +53,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="text-gray-400 text-sm">
-            &copy; {currentYear} Tushar Chaudhari. All rights reserved. 
-                                      
+            &copy; {currentYear} Tushar Chaudhari. All rights reserved.
           </div>
         </div>
       </div>
