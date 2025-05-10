@@ -1,5 +1,5 @@
-import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import React from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact: React.FC = () => {
   return (
@@ -11,26 +11,6 @@ const Contact: React.FC = () => {
         <p className="text-gray-400 text-center mb-12">
           Feel free to reach out for collaborations or just a friendly hello
         </p>
-
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-black/50 p-6 rounded-lg border border-purple-900/30 text-center">
-            <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-            <p className="text-gray-400">tusharchaudhari1809@gmail.com</p>
-          </div>
-
-          <div className="bg-black/50 p-6 rounded-lg border border-purple-900/30 text-center">
-            <Phone className="w-8 h-8 text-teal-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-            <p className="text-gray-400">+91-782-184-8265</p>
-          </div>
-
-          <div className="bg-black/50 p-6 rounded-lg border border-purple-900/30 text-center">
-            <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Location</h3>
-            <p className="text-gray-400">Maharashtra</p>
-          </div>
-        </div>
 
         <div className="max-w-2xl mx-auto mt-12">
           <form className="space-y-6">
