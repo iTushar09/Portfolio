@@ -64,16 +64,13 @@ const About: React.FC = () => {
               <div className="rounded-xl overflow-hidden border-4 border-purple-700/30 shadow-xl shadow-purple-500/30 relative">
                 <div className="bg-gradient-to-r from-purple-900/60 to-teal-800/60 p-6 md:p-10 aspect-square flex items-center justify-center">
                   <div className="relative w-full h-full max-w-[34rem] max-h-[34rem] flex items-center justify-center">
-                    {/* Layered Border Frames */}
-                    
-                    {/* Central Content Box */}
+                   
                     <div className="absolute w-[65%] bg-black/50 backdrop-blur-sm px-4 md:px-6 py-6 md:py-8 rounded-xl text-center flex flex-col items-center">
                       <img
-                        src="src/mm.png"
+                        src="/mm.png"
                         
-                        className="w-25 h-26 md:w-42 md:h-42 object-cover border-2 border-teal-400 shadow-lg rounded-lg mb-4"
+                        className="w-26 h-26 md:w-42 md:h-42 object-cover border-2 border-teal-400 shadow-lg rounded-lg mb-4"
                       />
-                      <Cpu size={28} className="text-purple-400 my-2 md:my-3" />
                     
                     </div>
                     <div className="absolute w-full h-full border-4 border-teal-400/30 rounded-lg"></div>
