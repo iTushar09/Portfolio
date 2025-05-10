@@ -74,7 +74,8 @@ const About: React.FC = () => {
                   <div className="relative w-full h-full max-w-[34rem] max-h-[34rem] flex items-center justify-center">
                     <div className="absolute w-[65%] bg-black/50 backdrop-blur-sm px-4 md:px-6 py-6 md:py-8 rounded-xl text-center flex flex-col items-center">
                       <img
-                        src="/image.png"
+                        src="https://drive.google.com/uc?export=view&id=1hwRM_hg8QJJ5NH89e5kTaMNt2bQnVmW5"
+                        
                         className="w-26 h-26 md:w-42 md:h-42 object-cover border-2 border-teal-400 shadow-lg rounded-lg mb-4"
                       />
                     </div>
