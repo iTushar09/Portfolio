@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { Check, Cpu } from "lucide-react";
 
 const About: React.FC = () => {
@@ -61,13 +61,13 @@ const About: React.FC = () => {
                 </div>
               </div>
             </div>
-           
+
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="w-full md:w-1/2 order-1 md:order-2"
+              className="w-full md:w-1/2 order-2 md:order-1"
             >
               <div className="rounded-xl overflow-hidden border-4 border-purple-700/30 shadow-xl shadow-purple-500/30 relative">
                 <div className="bg-gradient-to-r from-purple-900/60 to-teal-800/60 p-6 md:p-10 aspect-square flex items-center justify-center">
@@ -88,7 +88,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-      
     </section>
   );
 };
