@@ -61,21 +61,21 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2 order-1 md:order-2">
-              <div className="rounded-xl overflow-hidden border-4 border-purple-700/30 shadow-xl shadow-purple-500/30 relative">
-                <div className="bg-gradient-to-r from-purple-900/60 to-teal-800/60 p-6 md:p-10 aspect-square flex items-center justify-center">
+              <div className="rounded-lg overflow-hidden border-4 border-purple-700/30 shadow-lg shadow-purple-500/30 relative">
+                <div className="bg-gradient-to-r from-purple-900/60 to-teal-800/60 p-10 aspect-square flex items-center justify-center">
                   <div className="relative w-full h-full max-w-[34rem] max-h-[34rem] flex items-center justify-center">
-                   
-                    <div className="absolute w-[65%] bg-black/50 backdrop-blur-sm px-4 md:px-6 py-6 md:py-8 rounded-xl text-center flex flex-col items-center">
+                    {/* Outer decorative borders */}
+                    <div className="absolute inset-0 border-4 border-purple-400/30 rounded-lg"></div>
+                    <div className="absolute inset-4 border-4 border-teal-400/30 rounded-lg"></div>
+                    <div className="absolute inset-8 border-4 border-purple-400/30 rounded-lg"></div>
+
+                    {/* Content box with image and text */}
+                    <div className="absolute inset-12 bg-black/50 backdrop-blur-sm px-4 py-4 rounded-lg flex flex-col items-center justify-center text-center">
                       <img
                         src="/mm.png"
-                        
-                        className="w-26 h-26 md:w-42 md:h-42 object-cover border-2 border-teal-400 shadow-lg rounded-lg mb-4"
+                        className="w-45 h-45 object-cover rounded-full border-2 border-teal-400 shadow-lg mb-3"
                       />
-                    
                     </div>
-                    <div className="absolute w-full h-full border-4 border-teal-400/30 rounded-lg"></div>
-                    <div className="absolute w-[93%] h-[93%] border-4 border-purple-400/30 rounded-lg"></div>
-
                   </div>
                 </div>
               </div>
