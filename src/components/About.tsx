@@ -69,8 +69,8 @@ const About: React.FC = () => {
                     {/* Central Content Box */}
                     <div className="absolute w-[65%] bg-black/50 backdrop-blur-sm px-4 md:px-6 py-6 md:py-8 rounded-xl text-center flex flex-col items-center">
                       <img
-                        src="/mm.png"
-                        alt="Tushar Chaudhari"
+                        src="src/mm.png"
+                        alt="Profile"
                         className="w-25 h-26 md:w-42 md:h-42 object-cover border-2 border-teal-400 shadow-lg rounded-lg mb-4"
                       />
                       <Cpu size={28} className="text-purple-400 my-2 md:my-3" />
