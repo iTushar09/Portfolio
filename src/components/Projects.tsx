@@ -11,6 +11,8 @@ interface Project {
   image: string;
   category: string;
   tags: Tag[];
+  link?: string; // ✅ Optional link
+  github?: string; // ✅ Optional GitHub link
 }
 
 const projects: Project[] = [
@@ -28,13 +30,15 @@ const projects: Project[] = [
       { name: "XGBoost" },
       { name: "Streamlit" },
     ],
+    link: "https://customer-churn-prediction-app.vercel.app/", // ✅ Correctly placed
+    github: "https://github.com/iTushar09/Customer-Churn-Prediction-App.git",
   },
   {
     title: "Arduino-based Digital Ohmmeter",
     description:
       "Created a digital ohmmeter using Arduino, LCD, potentiometer, and breadboard to measure resistance with improved design accuracy.",
     image:
-      "https://www.homemade-circuits.com/wp-content/uploads/2016/11/LCD_bb-2.png",
+      "https://github.com/iTushar09/Arduino-based-Digital-Ohmmeter/raw/main/Circuit%20View.png",
     category: "Electronics",
     tags: [
       { name: "Arduino" },
@@ -42,6 +46,7 @@ const projects: Project[] = [
       { name: "Circuit Design" },
       { name: "LCD" },
     ],
+    link: "https://github.com/iTushar09/Arduino-based-Digital-Ohmmeter",
   },
   {
     title: "7-Segment Display with LPC2148",
@@ -57,9 +62,25 @@ const projects: Project[] = [
       { name: "GPIO" },
     ],
   },
+  {
+    title: "🐦 Twitter Sentiment Analysis App",
+    description:
+      "Analyze the emotional tone of tweets with a lightweight web app. Features real-time sentiment detection, confidence scores, interactive charts, and mobile-friendly design using HTML, CSS, JavaScript, and Chart.js.",
+    image:
+      "https://imgs.search.brave.com/6dAdbMFGWBsoATStg51aGajLVQrlfeU3pUs41p1nayY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGlnaXRhbHZpZHlh/LmNvbS9ibG9nL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE4LzEw/L1RXSVRURVItU0VO/VElNRU5ULUFOQUxZ/U0lTLnBuZw",
+    category: "Web App",
+    tags: [
+      { name: "JavaScript" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Chart.js" },
+      { name: "Sentiment Analysis" },
+    ],
+    link: "https://twitter-sentiment-analysis-app.vercel.app/", // ✅ Correctly placed
+  },
 ];
 
-const Projects: React.FC = () => {
+const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const categories = [
@@ -138,12 +159,26 @@ const Projects: React.FC = () => {
                   ))}
                 </div>
 
-                <a
-                  href="#"
-                  className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors"
-                >
-                  View details <ChevronRight size={16} className="ml-1" />
-                </a>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors"
+                  >
+                    View details <ChevronRight size={16} className="ml-1" />
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-4 inline-flex items-center text-gray-400 hover:text-gray-200 transition-colors"
+                  >
+                    GitHub <ChevronRight size={16} className="ml-1" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
