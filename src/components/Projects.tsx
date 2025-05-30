@@ -11,8 +11,8 @@ interface Project {
   image: string;
   category: string;
   tags: Tag[];
-  link?: string; // ✅ Optional link
-  github?: string; // ✅ Optional GitHub link
+  link?: string;
+  github?: string;
 }
 
 const projects: Project[] = [
@@ -30,7 +30,7 @@ const projects: Project[] = [
       { name: "XGBoost" },
       { name: "Streamlit" },
     ],
-    link: "https://customer-churn-prediction-app.vercel.app/", // ✅ Correctly placed
+    link: "https://customer-churn-prediction-app.vercel.app/",
     github: "https://github.com/iTushar09/Customer-Churn-Prediction-App.git",
   },
   {
@@ -53,7 +53,7 @@ const projects: Project[] = [
     description:
       "Designed and programmed a 7-segment display system to show even numbers using the LPC2148 microcontroller and Embedded C.",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUUOAKgaApqBFtDJf0yD7WN1gRF_o2YPx8rA&s",
+      "https://as1.ftcdn.net/v2/jpg/05/23/78/66/1000_F_523786670_YN08MJKNnVcCInIWAu633CZPO1baErAK.jpg",
     category: "Microcontroller",
     tags: [
       { name: "LPC2148" },
@@ -76,7 +76,22 @@ const projects: Project[] = [
       { name: "Chart.js" },
       { name: "Sentiment Analysis" },
     ],
-    link: "https://twitter-sentiment-analysis-app.vercel.app/", // ✅ Correctly placed
+    link: "https://twitter-sentiment-analysis-app.vercel.app/",
+  },
+  {
+    title: "India Air Quality Checker",
+    description:
+      "India Air Quality Checker is a lightweight Flask web application that lets users quickly check the real-time Air Quality Index (AQI) for cities across India. Powered by the OpenWeatherMap API, it provides accurate air pollution data to help users stay informed about the air they breathe.",
+    image:
+      "https://as1.ftcdn.net/v2/jpg/08/73/97/98/1000_F_873979815_dz2X3r4ugnlHzNnlXgORu6IIbesk6I64.jpg",
+    category: "Web App",
+    tags: [
+      { name: "Python" },
+      { name: "Flask" },
+      { name: "HTML5" },
+      { name: "API" },
+    ],
+    link: "https://github.com/iTushar09/India-Air-Quality-Checker.git",
   },
 ];
 
@@ -85,7 +100,7 @@ const Projects = () => {
 
   const categories = [
     "all",
-    ...new Set(projects.map((project) => project.category)),
+    ...Array.from(new Set(projects.map((project) => project.category))),
   ];
 
   const filteredProjects =
@@ -159,26 +174,28 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors"
-                  >
-                    View details <ChevronRight size={16} className="ml-1" />
-                  </a>
-                )}
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-4 inline-flex items-center text-gray-400 hover:text-gray-200 transition-colors"
-                  >
-                    GitHub <ChevronRight size={16} className="ml-1" />
-                  </a>
-                )}
+                <div>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors"
+                    >
+                      View details <ChevronRight size={16} className="ml-1" />
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-4 inline-flex items-center text-gray-400 hover:text-gray-200 transition-colors"
+                    >
+                      GitHub <ChevronRight size={16} className="ml-1" />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
