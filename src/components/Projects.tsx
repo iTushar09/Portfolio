@@ -93,6 +93,23 @@ const projects: Project[] = [
     ],
     link: "https://github.com/iTushar09/India-Air-Quality-Checker.git",
   },
+  {
+  title: "🧰 Easy PDF Handling App",
+  description:
+    "A user-friendly Streamlit web app for manipulating PDF files right in your browser. Features include image-to-PDF conversion, PDF splitting/merging, text/image extraction, encryption/decryption, and metadata editing — all without installation.",
+  image:
+    "https://imgs.search.brave.com/MZTMzWmj-hKU0xS_6sh3ShCJ1LNAnT9CSBUXwwy3y_c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wZGZn/dXJ1LmNvbS9zdGF0/aWMvbG9hZGluZy1j/b252ZXJzaW9uLnN2/Zw",
+  category: "Web App",
+  tags: [
+    { name: "Python" },
+    { name: "Streamlit" },
+    { name: "PDF" },
+    { name: "PyMuPDF" },
+    { name: "PyPDF2" }
+  ],
+  link: "https://easy-pdf-handling-tools-by-tusharchaudhari.streamlit.app/"
+}
+
 ];
 
 const Projects = () => {
