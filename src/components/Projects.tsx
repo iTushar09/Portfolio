@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { ChevronRight, Github, ExternalLink, Eye, Star, GitFork, Calendar, Code, Layers } from "lucide-react";
+import { ChevronRight, Github, ExternalLink, Eye, Star, GitFork, Code, Layers } from "lucide-react";
 
 interface Tag {
   name: string;
@@ -130,11 +130,7 @@ const ProjectCard: React.FC<{ project: Project; index: number; isVisible: boolea
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-  const statusColors = {
-    completed: "bg-green-500/20 text-green-300 border-green-500/30",
-    'in-progress': "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
-    maintained: "bg-blue-500/20 text-blue-300 border-blue-500/30"
-  };
+   
 
   return (
     <div
@@ -156,21 +152,8 @@ const ProjectCard: React.FC<{ project: Project; index: number; isVisible: boolea
           : 'border-purple-500/20 hover:border-purple-400/60'
       }`}>
         
-        {/* Status and year badges */}
-        <div className="absolute top-4 left-4 z-30 flex gap-2">
-          
-          
-        </div>
-
-        {/* Featured badge */}
-        {project.featured && (
-          <div className="absolute top-4 right-4 z-30">
-            <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-500/40">
-              <Star size={12} className="text-yellow-400 fill-yellow-400" />
-              <span className="text-xs text-yellow-300 font-medium">Featured</span>
-            </div>
-          </div>
-        )}
+         
+ 
 
         {/* Image section */}
         <div className="relative h-56 overflow-hidden">
@@ -283,7 +266,6 @@ const Projects: React.FC = () => {
       : projects.filter((project) => project.category === activeCategory);
 
   const featuredProjects = projects.filter(p => p.featured);
-  const regularProjects = projects.filter(p => !p.featured);
 
   useEffect(() => {
     const timer = setTimeout(() => {
