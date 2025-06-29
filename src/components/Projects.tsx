@@ -92,7 +92,7 @@ const projects: Project[] = [
     description:
       "Real-time sentiment analysis web application with interactive visualizations, confidence scoring, and trend analysis. Features responsive design and Chart.js integration.",
     image: "https://imgs.search.brave.com/6dAdbMFGWBsoATStg51aGajLVQrlfeU3pUs41p1nayY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGlnaXRhbHZpZHlh/LmNvbS9ibG9nL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE4LzEw/L1RXSVRURVItU0VO/VElNRU5ULUFOQUxZ/U0lTLnBuZw",
-    category: "Web App",
+    category: "Machine Learning",
     tags: [
        { name: "Sentiment Analysis", color: "bg-purple-500/20 text-purple-300" },
       { name: "HTML5", color: "bg-orange-500/20 text-orange-300" },
@@ -109,7 +109,7 @@ const projects: Project[] = [
     description:
       "Comprehensive air quality monitoring application with real-time AQI data, historical trends, and health recommendations. Supports 50+ Indian cities.",
     image: "https://as1.ftcdn.net/v2/jpg/08/73/97/98/1000_F_873979815_dz2X3r4ugnlHzNnlXgORu6IIbesk6I64.jpg",
-    category: "Web App",
+    category: "Machine Learning",
     tags: [
       { name: "Python", color: "bg-blue-500/20 text-blue-300" },
       { name: "Flask", color: "bg-green-500/20 text-green-300" },
