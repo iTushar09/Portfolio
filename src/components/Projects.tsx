@@ -158,34 +158,43 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-black/50 rounded-xl overflow-hidden shadow-lg border border-purple-900/30 hover:border-purple-600/50 transition-colors group transform hover:scale-[1.02] duration-300"
+              className="group relative bg-gradient-to-br from-black/60 to-purple-900/20 rounded-2xl overflow-hidden shadow-xl border border-purple-500/20 hover:border-purple-400/60 transition-all duration-500 transform hover:scale-[1.03] hover:shadow-2xl hover:shadow-purple-500/25"
             >
-              <div className="h-48 overflow-hidden">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/5 to-teal-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative h-48 overflow-hidden">
+                {/* Image overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
                 <img
                   src={project.image}
                   alt={project.title}
                   onError={(e) => {
                     e.currentTarget.src = "/fallback.jpg"; // fallback image
                   }}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
                 />
-              </div>
-              <div className="p-6">
-                <div className="mb-3">
-                  <span className="text-xs text-teal-400 bg-teal-900/20 px-2 py-1 rounded">
+                {/* Category badge on image */}
+                <div className="absolute top-4 left-4 z-20">
+                  <span className="text-xs text-white bg-gradient-to-r from-purple-600 to-teal-600 px-3 py-1 rounded-full font-medium shadow-lg">
                     {project.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">
+              </div>
+              
+              <div className="relative p-6">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
+                <p className="text-gray-400 mb-5 text-sm leading-relaxed line-clamp-3">
+                  {project.description}
+                </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="text-xs bg-purple-900/30 text-purple-300 px-2 py-1 rounded"
+                      className="text-xs bg-gradient-to-r from-purple-900/40 to-purple-800/40 text-purple-200 px-3 py-1 rounded-full border border-purple-700/30 hover:border-purple-500/50 transition-colors"
                     >
                       {tag.name}
                     </span>
@@ -198,9 +207,10 @@ const Projects = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors"
+                      className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors font-medium group/btn"
                     >
-                      View Code <ChevronRight size={16} className="ml-1" />
+                      View Code 
+                      <ChevronRight size={16} className="ml-1 group-hover/btn:translate-x-1 transition-transform" />
                     </a>
                   )}
                   {project.DemoApp && (
@@ -208,12 +218,16 @@ const Projects = () => {
                       href={project.DemoApp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-gray-400 hover:text-gray-200 transition-colors"
+                      className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors font-medium group/btn"
                     >
-                      Live Demo <ChevronRight size={16} className="ml-1" />
+                      Live Demo 
+                      <ChevronRight size={16} className="ml-1 group-hover/btn:translate-x-1 transition-transform" />
                     </a>
                   )}
                 </div>
+
+                {/* Bottom accent */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-purple-400 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </div>
           ))}

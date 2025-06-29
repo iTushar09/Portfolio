@@ -26,13 +26,14 @@ const webDevelopment: TechnicalSkill[] = [
 const tools: Tool[] = [
   { name: 'MATLAB' },
   { name: 'Keil μVision5' },
-  { name: 'LTspice' },
-  { name: 'KiCad' },
   { name: 'Oscilloscope' },
-  { name: 'Function Generator' },
   { name: 'Git' },
+  { name: 'Function Generator' },
+  
   { name: 'VS Code' },
   { name: 'Proteus' },
+  { name: 'LTspice' },
+  { name: 'KiCad' },
 ];
 
 const softSkills: string[] = [
@@ -44,18 +45,24 @@ const softSkills: string[] = [
   'Adaptability',
 ];
 
-const SkillBar: React.FC<{ skill: TechnicalSkill }> = ({ skill }) => {
+const SkillBar: React.FC<{ skill: TechnicalSkill; index: number }> = ({ skill, index }) => {
   return (
-    <div className="mb-4">
-      <div className="flex justify-between items-center mb-1">
-        <span className="text-gray-300">{skill.name}</span>
-        <span className="text-teal-400 text-sm">{skill.percentage}%</span>
+    <div className="mb-6 group">
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-gray-200 font-medium group-hover:text-white transition-colors">{skill.name}</span>
+        <span className="text-teal-400 text-sm font-semibold">{skill.percentage}%</span>
       </div>
-      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+      <div className="h-3 bg-gray-800/50 rounded-full overflow-hidden relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full"></div>
         <div 
-          className="h-full bg-gradient-to-r from-purple-500 to-teal-400 rounded-full"
-          style={{ width: `${skill.percentage}%` }}
-        ></div>
+          className="h-full bg-gradient-to-r from-purple-500 via-purple-400 to-teal-400 rounded-full relative overflow-hidden transition-all duration-1000 ease-out"
+          style={{ 
+            width: `${skill.percentage}%`,
+            animationDelay: `${index * 0.1}s`
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[20deg] w-6 animate-pulse"></div>
+        </div>
       </div>
     </div>
   );
@@ -80,16 +87,16 @@ const Skills: React.FC = () => {
               </h3>
 
               <div className="mb-8">
-                <h4 className="text-purple-400 mb-4">Programming Languages</h4>
+                <h4 className="text-purple-400 mb-6 font-semibold">Programming Languages</h4>
                 {programmingLanguages.map((skill, index) => (
-                  <SkillBar key={index} skill={skill} />
+                  <SkillBar key={index} skill={skill} index={index} />
                 ))}
               </div>
 
               <div>
-                <h4 className="text-purple-400 mb-4">Web Development</h4>
+                <h4 className="text-purple-400 mb-6 font-semibold">Web Development</h4>
                 {webDevelopment.map((skill, index) => (
-                  <SkillBar key={index} skill={skill} />
+                  <SkillBar key={index} skill={skill} index={index + programmingLanguages.length} />
                 ))}
               </div>
             </div>
@@ -103,11 +110,11 @@ const Skills: React.FC = () => {
                   {tools.map((tool, index) => (
                     <div 
                       key={index} 
-                      className="px-4 py-2 bg-black/50 rounded-full border border-teal-900/50 text-teal-400 text-sm"
+                      className="group px-5 py-3 bg-gradient-to-r from-black/60 to-teal-900/20 rounded-full border border-teal-500/30 text-teal-300 text-sm hover:border-teal-400/60 hover:from-black/80 hover:to-teal-900/40 transition-all duration-300 transform hover:scale-105"
                     >
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-teal-400"></div>
-                        {tool.name}
+                        <div className="w-2 h-2 rounded-full bg-teal-400 group-hover:animate-pulse"></div>
+                        <span className="font-medium">{tool.name}</span>
                       </div>
                     </div>
                   ))}
@@ -122,9 +129,12 @@ const Skills: React.FC = () => {
                   {softSkills.map((skill, index) => (
                     <div 
                       key={index} 
-                      className="px-4 py-3 bg-purple-900/20 rounded-lg border border-purple-800/30 text-gray-300"
+                      className="group px-5 py-4 bg-gradient-to-br from-purple-900/30 to-purple-800/20 rounded-xl border border-purple-500/20 text-gray-200 hover:border-purple-400/40 hover:from-purple-900/40 hover:to-purple-800/30 hover:text-white transition-all duration-300 transform hover:scale-105"
                     >
-                      {skill}
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-purple-400 group-hover:animate-pulse"></div>
+                        <span className="font-medium">{skill}</span>
+                      </div>
                     </div>
                   ))}
                 </div>

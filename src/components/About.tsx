@@ -69,17 +69,42 @@ const About: React.FC = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2 order-1 md:order-2"
             >
-              <div className="rounded-xl overflow-hidden border-4 border-purple-700/30 shadow-xl shadow-purple-500/30 relative">
-                <div className="bg-gradient-to-r from-purple-900/60 to-teal-800/60 p-6 md:p-10 aspect-square flex items-center justify-center">
-                  <div className="relative w-full h-full max-w-[34rem] max-h-[34rem] flex items-center justify-center">
-                    <div className="absolute w-[65%] bg-black/50 backdrop-blur-sm px-4 md:px-6 py-6 md:py-8 rounded-xl text-center flex flex-col items-center">
-                      <img
-                        src="https://pbs.twimg.com/profile_images/1921307943510675457/pyAsvuFZ_400x400.jpg"
-                          className="w-26 h-26 md:w-42 md:h-42 object-cover border-2 border-teal-400 shadow-lg rounded-lg mb-4"  />
+              <div className="relative">
+                {/* Floating elements */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-teal-500/20 rounded-full blur-lg animate-pulse delay-1000"></div>
+                
+                <div className="rounded-2xl overflow-hidden border border-purple-500/20 shadow-2xl shadow-purple-500/10 relative backdrop-blur-sm bg-gradient-to-br from-purple-900/20 to-teal-900/20">
+                  <div className="p-8 md:p-12">
+                    <div className="relative">
+                      {/* Profile image with enhanced styling */}
+                      <div className="relative w-64 h-64 mx-auto mb-6">
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 rounded-2xl blur-sm opacity-60 animate-pulse"></div>
+                        <img
+                          src="https://pbs.twimg.com/profile_images/1921307943510675457/pyAsvuFZ_400x400.jpg"
+                          alt="Tushar Chaudhri"
+                          className="relative w-full h-full object-cover rounded-2xl border-2 border-purple-400/50 shadow-xl z-10"
+                        />
+                        <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/20 to-teal-600/20 rounded-2xl blur-md"></div>
+                      </div>
+                      
+                      {/* Decorative elements */}
+                      <div className="absolute top-4 right-4 w-3 h-3 bg-teal-400 rounded-full animate-ping"></div>
+                      <div className="absolute bottom-4 left-4 w-2 h-2 bg-purple-400 rounded-full animate-ping delay-500"></div>
+                      
+                      {/* Tech stack icons */}
+                      <div className="flex justify-center gap-4 mt-6">
+                        <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                          <span className="text-xs text-purple-300 font-bold">C</span>
+                        </div>
+                        <div className="w-8 h-8 bg-teal-500/20 rounded-lg flex items-center justify-center">
+                          <span className="text-xs text-teal-300 font-bold">Py</span>
+                        </div>
+                        <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                          <span className="text-xs text-purple-300 font-bold">PCB</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="absolute w-full h-full border-4 border-teal-400/30 rounded-lg"></div>
-                    <div className="absolute w-[93%] h-[93%] border-4 border-purple-400/30 rounded-lg"></div>
-                    <div className="absolute w-[85%] h-[85%] border-4 border-teal-400/30 rounded-lg"></div>
                   </div>
                 </div>
               </div>
