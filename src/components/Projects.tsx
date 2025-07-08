@@ -131,7 +131,7 @@ const projects: Project[] = [
     description:
       "DIY people counter system using Arduino and IR sensors. Detects entry/exit direction and updates a real-time count on a 16x2 LCD. Ideal for monitoring rooms, halls, or events.",
     image:
-      "https://github.com/iTushar09/IoT-based-Bidirectional-Visitor-Counter/blob/main/Circuit%20view.png", 
+      "https://github.com/iTushar09/IoT-based-Bidirectional-Visitor-Counter/blob/main/Circuit%20view.png?raw=true", 
     category: "Electronics & Microcontroller",
     tags: [
       { name: "Arduino", color: "bg-teal-500/20 text-teal-300" },
