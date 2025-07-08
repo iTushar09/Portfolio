@@ -29,7 +29,7 @@ const Header: React.FC = () => {
       label: "GitHub"
     },
     {
-      href: "https://linkedin.com/in/tusharchaudhri",
+      href: "https://www.linkedin.com/in/tusharchaudhari0918/",
       icon: Linkedin,
       label: "LinkedIn"
     },

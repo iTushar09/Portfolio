@@ -74,10 +74,10 @@ const projects: Project[] = [
     
   },
   {
-    title: "7-Segment Display with LPC2148",
+    title: " Up/Down Counter using LPC2148",
     description:
-      "Efficient embedded system displaying even numbers with multiplexed 7-segment displays. Implemented custom drivers and optimized for low power consumption.",
-    image: "https://as1.ftcdn.net/v2/jpg/05/23/78/66/1000_F_523786670_YN08MJKNnVcCInIWAu633CZPO1baErAK.jpg",
+      " This project demonstrates an Up/Down counter using the LPC2148 ARM7 microcontroller and 8 LEDs",
+    image: "https://github.com/iTushar09/UpDown-Counting-using-lpc2148/raw/main/image.png",
     category: "Electronics & Microcontroller",
     tags: [
       { name: "LPC2148", color: "bg-indigo-500/20 text-indigo-300" },
@@ -85,7 +85,7 @@ const projects: Project[] = [
       { name: "Proteus", color: "bg-green-500/20 text-green-300" },
       { name: "GPIO", color: "bg-red-500/20 text-red-300" },
     ],
-    link:"https://github.com/iTushar09",
+    link:"https://github.com/iTushar09/UpDown-Counting-using-lpc2148",
   },
   {
     title: "🐦 Twitter Sentiment Analysis App",
