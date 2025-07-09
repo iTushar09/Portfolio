@@ -37,11 +37,11 @@ const BackgroundParticles: React.FC = () => {
     // Create particles
     const particlesArray: Particle[] = [];
     const colors = [
-      'rgba(147, 51, 234, 0.4)', // Purple
-      'rgba(168, 85, 247, 0.3)', // Light purple
-      'rgba(20, 184, 166, 0.4)', // Teal
-      'rgba(56, 189, 248, 0.3)', // Light blue
-      'rgba(79, 70, 229, 0.3)',  // Indigo
+      'rgba(139, 92, 246, 0.5)', // Violet
+      'rgba(59, 130, 246, 0.4)', // Blue
+      'rgba(16, 185, 129, 0.4)', // Emerald
+      'rgba(245, 158, 11, 0.3)', // Amber
+      'rgba(236, 72, 153, 0.3)', // Pink
     ];
 
     const particleCount = Math.min(80, Math.floor(canvas.width * canvas.height / 15000));
@@ -86,7 +86,7 @@ const BackgroundParticles: React.FC = () => {
             const opacity = (1 - distance / maxDistance) * 0.2;
             
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(147, 51, 234, ${opacity})`;
+            ctx.strokeStyle = `rgba(139, 92, 246, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particle1.x, particle1.y);
             ctx.lineTo(particle2.x, particle2.y);
@@ -109,7 +109,7 @@ const BackgroundParticles: React.FC = () => {
           const opacity = (1 - distance / maxDistance) * 0.4;
           
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(20, 184, 166, ${opacity})`;
+          ctx.strokeStyle = `rgba(16, 185, 129, ${opacity})`;
           ctx.lineWidth = 1;
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(mouse.x, mouse.y);
@@ -118,7 +118,7 @@ const BackgroundParticles: React.FC = () => {
           // Create ripple effect around mouse
           ctx.beginPath();
           ctx.arc(mouse.x, mouse.y, distance * 0.1, 0, Math.PI * 2);
-          ctx.strokeStyle = `rgba(20, 184, 166, ${opacity * 0.3})`;
+          ctx.strokeStyle = `rgba(16, 185, 129, ${opacity * 0.3})`;
           ctx.lineWidth = 2;
           ctx.stroke();
         }
@@ -216,7 +216,7 @@ const BackgroundParticles: React.FC = () => {
         style={{ opacity: 0.8 }}
       />
       {/* Additional overlay for depth */}
-      <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent via-black/5 to-black/20 pointer-events-none" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent via-slate-900/10 to-purple-900/20 pointer-events-none" />
     </>
   );
 };

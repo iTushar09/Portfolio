@@ -44,7 +44,7 @@ const projects: Project[] = [
     link: "https://github.com/iTushar09/Customer-Churn-Prediction-App.git",
     DemoApp:
       "https://itushar09-customer-churn-prediction-app-app1-ly6bml.streamlit.app/",
-    featured: true,
+     
   },
   {
     title: "🧰 Easy PDF Handling App",
@@ -78,7 +78,7 @@ const projects: Project[] = [
       { name: "LCD", color: "bg-purple-500/20 text-purple-300" },
     ],
     link: "https://github.com/iTushar09/Arduino-based-Digital-Ohmmeter",
-    featured: true,
+     
   },
   {
     title: " Up/Down Counter using LPC2148",
@@ -109,7 +109,7 @@ const projects: Project[] = [
     ],
     link: "https://github.com/iTushar09/Twitter-Sentiment-Analysis-App.git",
     DemoApp: "https://twitter-sentiment-analysis-app.vercel.app/",
-    featured: true,
+     
   },
   {
     title: "India Air Quality Checker",
@@ -326,7 +326,7 @@ const Projects: React.FC = () => {
             development, and machine learning
           </p>
 
-          {/* Stats */}
+          
           
         </div>
 

@@ -12,7 +12,7 @@ import BackgroundParticles from './components/BackgroundParticles';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden">
       <BackgroundParticles />
       <Header />
       <main className="relative z-10">
