@@ -55,7 +55,7 @@ const Header: React.FC = () => {
             href="#home"
             className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent hover:from-purple-300 hover:to-teal-300 transition-all duration-300"
           >
-            तुषारचौधरी
+            तुषार
           </a>
 
           {/* Desktop Navigation */}
