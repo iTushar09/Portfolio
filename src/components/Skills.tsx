@@ -273,37 +273,8 @@ const Skills: React.FC = () => {
             </div>
           </div>
 
-          {/* Skills Summary */}
-          <div className="mt-12 text-center">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 p-6 rounded-xl border border-purple-500/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">
-                  {programmingLanguages.length}
-                </div>
-                <div className="text-sm text-gray-400">
-                  Programming Languages
-                </div>
-              </div>
-              <div className="bg-gradient-to-br from-teal-900/30 to-teal-800/20 p-6 rounded-xl border border-teal-500/20">
-                <div className="text-3xl font-bold text-teal-400 mb-2">
-                  {webDevelopment.length}
-                </div>
-                <div className="text-sm text-gray-400">Web Technologies</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/20 p-6 rounded-xl border border-blue-500/20">
-                <div className="text-3xl font-bold text-blue-400 mb-2">
-                  {tools.length}
-                </div>
-                <div className="text-sm text-gray-400">Tools & Software</div>
-              </div>
-              <div className="bg-gradient-to-br from-pink-900/30 to-pink-800/20 p-6 rounded-xl border border-pink-500/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">
-                  {softSkills.length}
-                </div>
-                <div className="text-sm text-gray-400">Soft Skills</div>
-              </div>
-            </div>
-          </div>
+          
+          
         </div>
       </div>
     </section>

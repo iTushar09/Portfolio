@@ -327,26 +327,7 @@ const Projects: React.FC = () => {
           </p>
 
           {/* Stats */}
-          <div className="flex justify-center gap-8 mt-8">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">
-                {projects.length}
-              </div>
-              <div className="text-sm text-gray-500">Total Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-teal-400">
-                {featuredProjects.length}
-              </div>
-              <div className="text-sm text-gray-500">Featured</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-pink-400">
-                {categories.length - 1}
-              </div>
-              <div className="text-sm text-gray-500">Categories</div>
-            </div>
-          </div>
+          
         </div>
 
         {/* Category Filter */}
