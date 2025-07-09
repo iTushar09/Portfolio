@@ -66,7 +66,9 @@ const Hero: React.FC = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 100) {
-            ctx.strokeStyle = `rgba(147, 51, 234, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(147, 51, 234, ${
+              0.1 * (1 - distance / 100)
+            })`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -81,8 +83,18 @@ const Hero: React.FC = () => {
         const pulseFactor = Math.sin(time * particle.pulseSpeed) * 0.3 + 0.7;
 
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.radius * pulseFactor, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+        ctx.arc(
+          particle.x,
+          particle.y,
+          particle.radius * pulseFactor,
+          0,
+          Math.PI * 2
+        );
+        ctx.fillStyle =
+          particle.color +
+          Math.floor(particle.opacity * 255)
+            .toString(16)
+            .padStart(2, "0");
         ctx.fill();
 
         // Add glow effect
@@ -116,7 +128,10 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen flex items-center overflow-hidden">
+    <section
+      id="home"
+      className="relative h-screen flex items-center overflow-hidden"
+    >
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-teal-900/20"></div>
 
@@ -165,7 +180,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
-            Electronics & Telecommunication Engineering Student | Embedded Systems & AI/ML Enthusiast | Python & C++ Developer
+            Electronics & Telecommunication Engineering Student | Embedded
+            Systems & AI/ML Enthusiast | Python & C++ Developer
           </motion.p>
 
           <motion.div
@@ -180,11 +196,14 @@ const Hero: React.FC = () => {
             >
               <span className="flex items-center gap-2">
                 View Projects
-                <ChevronDown size={18} className="group-hover:translate-y-1 transition-transform" />
+                <ChevronDown
+                  size={18}
+                  className="group-hover:translate-y-1 transition-transform"
+                />
               </span>
             </a>
             <a
-              href="public/TusharChaudhariResume.pdf"
+              href="/TusharChaudhariResume.pdf"
               download
               className="px-8 py-4 bg-transparent border-2 border-purple-400 rounded-full text-purple-400 font-semibold hover:bg-purple-900/30 hover:border-purple-300 hover:text-purple-300 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
             >
