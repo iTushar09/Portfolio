@@ -58,43 +58,7 @@ const programmingLanguages: Skill[] = [
   },
 ];
 
-const webDevelopment: Skill[] = [
-  {
-    name: "HTML5",
-    percentage: 85,
-    icon: "🌐",
-    color: "from-orange-500 to-red-500",
-    proficiency: "Advanced",
-  },
-  {
-    name: "CSS3",
-    percentage: 80,
-    icon: "🎨",
-    color: "from-blue-500 to-purple-500",
-    proficiency: "Advanced",
-  },
-  {
-    name: "TypeScript",
-    percentage: 68,
-    icon: "📘",
-    color: "from-blue-600 to-blue-700",
-    proficiency: "Intermediate",
-  },
-  {
-    name: "Bootstrap",
-    percentage: 75,
-    icon: "🅱️",
-    color: "from-purple-600 to-indigo-600",
-    proficiency: "Intermediate",
-  },
-  {
-    name: "Tailwind CSS",
-    percentage: 82,
-    icon: "💨",
-    color: "from-teal-400 to-cyan-500",
-    proficiency: "Advanced",
-  },
-];
+ 
 
 const tools: Tool[] = [
   { name: "Keil μVision5", icon: "🔬" },
@@ -187,39 +151,7 @@ const Skills: React.FC = () => {
             </div>
           </div>
 
-          {/* Web Development with Star Rating */}
-          <div className="mt-12 bg-gradient-to-br from-black/40 to-black/20 p-8 rounded-2xl border border-teal-900/30 backdrop-blur-sm">
-            <div className="flex items-center gap-3 mb-8 justify-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-purple-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">🌐</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white">Web Development</h3>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {webDevelopment.map((skill, index) => (
-                <div
-                  key={index}
-                  className="group px-5 py-4 bg-gradient-to-r from-black/60 to-teal-900/20 rounded-xl border border-teal-500/30 text-teal-300 hover:border-teal-400/60 hover:from-black/80 hover:to-teal-900/40 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-                >
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="text-4xl group-hover:scale-110 transition-transform">
-                      {skill.icon}
-                    </div>
-                    <div className="text-center">
-                      <span className="font-medium text-sm block">
-                        {skill.name}
-                      </span>
-                      <div className="text-xs text-teal-400 mt-1">
-                        {"★".repeat(Math.round(skill.percentage / 20)) +
-                          "☆".repeat(5 - Math.round(skill.percentage / 20))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+           
 
           {/* Tools & Technologies */}
           <div className="mt-12 bg-gradient-to-br from-black/40 to-black/20 p-8 rounded-2xl border border-purple-900/30 backdrop-blur-sm">
