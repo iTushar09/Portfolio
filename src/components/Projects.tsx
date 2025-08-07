@@ -43,7 +43,7 @@ const projects: Project[] = [
     ],
     link: "https://github.com/iTushar09/Customer-Churn-Prediction-App.git",
     DemoApp:
-      "https://itushar09-customer-churn-prediction-app-app1-ly6bml.streamlit.app/",
+      "https://customer-churn-prediction-app-by-tushar-chaudhari.streamlit.app/",
      
   },
   {
@@ -290,7 +290,7 @@ const Projects: React.FC = () => {
       ? projects
       : projects.filter((project) => project.category === activeCategory);
 
-  const featuredProjects = projects.filter((p) => p.featured);
+  
 
   useEffect(() => {
     const timer = setTimeout(() => {

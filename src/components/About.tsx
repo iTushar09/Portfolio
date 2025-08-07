@@ -106,7 +106,7 @@ const About: React.FC = () => {
                     <div className="relative w-72 h-72 md:w-80 md:h-80">
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 rounded-2xl blur-sm opacity-60 animate-pulse"></div>
                       <img
-                        src="https://scontent.fnag1-1.fna.fbcdn.net/v/t39.30808-6/516705418_1180901060476397_2355744708003375092_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RvaOQIy07VEQ7kNvwE8D5Qo&_nc_oc=Adk7f3OmbpKPAHfvkkxqAFjLV882X-AJ29pVJqU0JP6FHmK-1RMBe1UT2izqznhEeyg&_nc_zt=23&_nc_ht=scontent.fnag1-1.fna&_nc_gid=n1xdrUOBzShMvRXDPXjh4g&oh=00_AfRhiRpUxpyv-gHvFTE1WzwUSnmIMPsqbpa-5wA6CVv2Xw&oe=68916821"
+                        src="https://pbs.twimg.com/profile_images/1942832359897980929/LtubgUhq_400x400.jpg"
                         alt="Tushar Chaudhri"
                         className="relative w-full h-full object-cover rounded-2xl border-2 border-purple-400/50 shadow-xl z-10"
                       />
