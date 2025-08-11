@@ -65,6 +65,37 @@ const projects: Project[] = [
       "https://easy-pdf-handling-tools-by-tusharchaudhari.streamlit.app/",
   },
   {
+  title: "Smart Home Automation System",
+  description:
+    "IoT-based home automation using ESP32, PIR motion sensor, relay module, and 16x2 LCD display. Automates appliance control via motion detection, with real-time status updates on LCD and open-source code for community use.",
+  image:
+    "https://github.com/iTushar09/Smart-Home-Project-Motion-Sensor-Relay-and-LCD-Display/raw/main/Circuit%20View.png",
+  category: "Electronics & IoT",
+  tags: [
+    { name: "ESP32", color: "bg-orange-500/20 text-orange-300" },
+    { name: "Arduino IDE", color: "bg-green-500/20 text-green-300" },
+    { name: "IoT", color: "bg-blue-500/20 text-blue-300" },
+    { name: "Sensors", color: "bg-purple-500/20 text-purple-300" }
+  ],
+  link: "https://github.com/iTushar09/Smart-Home-Project-Motion-Sensor-Relay-and-LCD-Display",
+},
+{
+    title: "IoT-based Bidirectional Visitor Counter",
+    description:
+      "DIY people counter system using Arduino and IR sensors. Detects entry/exit direction and updates a real-time count on a 16x2 LCD. Ideal for monitoring rooms, halls, or events.",
+    image:
+      "https://github.com/iTushar09/IoT-based-Bidirectional-Visitor-Counter/blob/main/Circuit%20view.png?raw=true", 
+    category: "Electronics & Microcontroller",
+    tags: [
+      { name: "Arduino", color: "bg-teal-500/20 text-teal-300" },
+      { name: "IR Sensor", color: "bg-red-500/20 text-red-300" },
+      { name: "LCD", color: "bg-purple-500/20 text-purple-300" },
+      { name: "IoT", color: "bg-blue-500/20 text-blue-300" },
+    ],
+    link: "https://github.com/iTushar09/IoT-based-Bidirectional-Visitor-Counter",  
+  },
+
+  {
     title: "Arduino-based Digital Ohmmeter",
     description:
       "Precision digital ohmmeter with auto-ranging capabilities, LCD display, and calibration features. Achieved ±0.5% accuracy across 1Ω to 1MΩ range with temperature compensation.",
@@ -126,21 +157,7 @@ const projects: Project[] = [
     ],
     link: "https://github.com/iTushar09/India-Air-Quality-Checker.git",
   },
-  {
-    title: "IoT-based Bidirectional Visitor Counter",
-    description:
-      "DIY people counter system using Arduino and IR sensors. Detects entry/exit direction and updates a real-time count on a 16x2 LCD. Ideal for monitoring rooms, halls, or events.",
-    image:
-      "https://github.com/iTushar09/IoT-based-Bidirectional-Visitor-Counter/blob/main/Circuit%20view.png?raw=true", 
-    category: "Electronics & Microcontroller",
-    tags: [
-      { name: "Arduino", color: "bg-teal-500/20 text-teal-300" },
-      { name: "IR Sensor", color: "bg-red-500/20 text-red-300" },
-      { name: "LCD", color: "bg-purple-500/20 text-purple-300" },
-      { name: "IoT", color: "bg-blue-500/20 text-blue-300" },
-    ],
-    link: "https://github.com/iTushar09/IoT-based-Bidirectional-Visitor-Counter",  
-  },
+  
 ];
 
 const ProjectCard: React.FC<{
