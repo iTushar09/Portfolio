@@ -101,7 +101,7 @@ const About: React.FC = () => {
                   <div className="relative w-72 h-72 md:w-80 md:h-80">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 rounded-2xl blur-sm opacity-60 animate-pulse"></div>
                     <img
-                       src="public\image.png"
+                       src="public/image.png"
                       alt="Tushar Chaudhri"
                       className="relative w-full h-full object-cover rounded-2xl border-2 border-purple-400/50 shadow-xl z-10"
                     />
