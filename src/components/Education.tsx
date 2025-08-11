@@ -52,16 +52,17 @@ const educationData: EducationItem[] = [
 ];
 
 const internshipData: EducationItem[] = [
-  {
-    degree: "Digital Electronics & VLSI Internship",
-    institution: "Codec Technologies Pvt. Ltd.",
-    location: "Remote",
-    period: "May 2025 – Jun 2025",
-    description: "Simulated and verified digital logic circuits using VLSI design techniques. Gained hands-on experience with design optimization and verification tools.",
-    timePeriod: "1-month Internship",
-    type: "professional",
-    skills: ["VLSI Design", "Digital Logic", "Circuit Simulation", "Design Verification"]
-  },
+ {
+  degree: "Embedded System Internship",
+  institution: "Acmegrade Pvt. Ltd.",
+  location: "Remote",
+  period: "May 2025 – Jul 2025",
+  description: "Engineered and developed embedded system prototypes using C, C++, and RTOS for real-time industrial applications. Collaborated on hardware-software integration and documented system architecture, logic, and performance outcomes.",
+  timePeriod: "2-month Internship",
+  type: "professional",
+  skills: ["Embedded Systems", "C", "C++", "RTOS", "Hardware-Software Integration", "Documentation"]
+},
+
   {
     degree: "Artificial Intelligence Internship",
     institution: "Codec Technologies Pvt. Ltd.",
@@ -95,6 +96,26 @@ const professionalData: EducationItem[] = [
     type: "professional",
     skills: ["Python", "Real Projects", "Model Deployment", "Data Analysis"]
   },
+  {
+  degree: "Python for Beginners",
+  institution: "Udemy",
+  location: "",
+  period: "2025",
+  description: "Acquired foundational Python programming skills, including syntax, functions, data structures, and control flow.",
+  timePeriod: "Certification",
+  type: "professional",
+  skills: ["Python", "Programming Fundamentals", "Problem Solving"]
+},
+  {
+  degree: "Embedded Systems",
+  institution: "Mindluster",
+  location: "",
+  period: "2025",
+  description: "Learned microcontroller concepts, embedded C programming, debugging techniques, and firmware development for real-time applications.",
+  timePeriod: "Certification",
+  type: "professional",
+  skills: ["Embedded Systems", "C Programming", "Firmware Development", "Hardware-Software Integration"]
+},
   {
     degree: "Embedded for Beginners",
     institution: "NIELIT",

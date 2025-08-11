@@ -147,7 +147,7 @@ const projects: Project[] = [
     description:
       "Comprehensive air quality monitoring application with real-time AQI data, historical trends, and health recommendations. Supports 50+ Indian cities.",
     image:
-      "https://as1.ftcdn.net/v2/jpg/08/73/97/98/1000_F_873979815_dz2X3r4ugnlHzNnlXgORu6IIbesk6I64.jpg",
+      "https://www.expertmarketresearch.com/files/images/india-air-quality-monitoring-system-market-by-segments.webp",
     category: "Machine Learning",
     tags: [
       { name: "Python", color: "bg-blue-500/20 text-blue-300" },
