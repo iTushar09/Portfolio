@@ -203,7 +203,7 @@ const Hero: React.FC = () => {
               </span>
             </a>
             <a
-              href="/TusharChaudhariResume.pdf"
+              href="public\Tushar Chaudhari-resume.pdf"
               download
               className="px-8 py-4 bg-transparent border-2 border-purple-400 rounded-full text-purple-400 font-semibold hover:bg-purple-900/30 hover:border-purple-300 hover:text-purple-300 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
             >
