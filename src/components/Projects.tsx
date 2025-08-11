@@ -52,7 +52,7 @@ const projects: Project[] = [
       "All-in-one PDF toolkit with 8+ utilities including conversion, splitting, merging, encryption, and metadata editing. Process files securely in your browser.",
     image:
       "https://imgs.search.brave.com/MZTMzWmj-hKU0xS_6sh3ShCJ1LNAnT9CSBUXwwy3y_c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wZGZn/dXJ1LmNvbS9zdGF0/aWMvbG9hZGluZy1j/b252ZXJzaW9uLnN2/Zw",
-    category: "Web App",
+    category: "Machine Learning",
     tags: [
       { name: "Python", color: "bg-blue-500/20 text-blue-300" },
       { name: "Streamlit", color: "bg-pink-500/20 text-pink-300" },
@@ -70,7 +70,7 @@ const projects: Project[] = [
     "IoT-based home automation using ESP32, PIR motion sensor, relay module, and 16x2 LCD display. Automates appliance control via motion detection, with real-time status updates on LCD and open-source code for community use.",
   image:
     "https://github.com/iTushar09/Smart-Home-Project-Motion-Sensor-Relay-and-LCD-Display/raw/main/Circuit%20View.png",
-  category: "Electronics & IoT",
+  category: "Electronics & Microcontroller",
   tags: [
     { name: "ESP32", color: "bg-orange-500/20 text-orange-300" },
     { name: "Arduino IDE", color: "bg-green-500/20 text-green-300" },
