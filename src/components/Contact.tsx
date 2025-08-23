@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Send, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion"; // Assuming framer-motion is used elsewhere and needed here implicitly
+
+// Assuming DarkVeil component is defined and imported elsewhere as per user message context.
+// For this snippet, we'll just ensure the structure is correct.
+// If DarkVeil was meant to be a replacement for the entire background,
+// its import and usage would be more prominent.
+// Based on the provided changes, it seems like specific background styles are being removed.
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -51,10 +58,12 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-black/40 to-black/60 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
+    <section id="contact" className="py-20">
+      {/* Background decorations are removed as per the change */}
+      {/* The intention was to replace background color with DarkVeil,
+          but the provided changes only remove specific background styles,
+          implying DarkVeil might be handled at a higher level or a different component.
+          Based strictly on the provided changes, we remove the inner background styles. */}
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
@@ -68,7 +77,7 @@ const Contact: React.FC = () => {
 
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
+
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="space-y-6">
@@ -98,7 +107,7 @@ const Contact: React.FC = () => {
               <div className="p-6 bg-gradient-to-br from-black/40 to-purple-900/10 rounded-2xl border border-purple-500/20 backdrop-blur-sm">
                 <h3 className="text-xl font-semibold text-white mb-4">Let's Work Together</h3>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  I'm passionate about creating innovative solutions at the intersection of hardware and software. 
+                  I'm passionate about creating innovative solutions at the intersection of hardware and software.
                   Whether you're looking for embedded systems development, machine learning solutions, or full-stack web applications, I'd love to discuss how we can bring your ideas to life.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">

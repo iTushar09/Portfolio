@@ -88,7 +88,7 @@ const About: React.FC = () => {
                 handle="Tusharchaudhari"
                 status="Available for work"
                 contactText="Contact Me"
-                avatarUrl="public/image.png"
+                avatarUrl="/image.png"
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
