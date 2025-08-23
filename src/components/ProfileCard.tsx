@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import "./ProfileCard.css";
 
@@ -56,7 +55,7 @@ interface ProfileCardProps {
 }
 
 const ProfileCardComponent: React.FC<ProfileCardProps> = ({
-  avatarUrl = "/public/image.png",
+  avatarUrl = "/image.png",
   iconUrl = "",
   grainUrl = "",
   behindGradient,
