@@ -85,10 +85,10 @@ const About: React.FC = () => {
               <ProfileCard
                 name="Tushar Chaudhari"
                 title="Electronics Engineer"
-                handle="iTushar09"
+                handle="Tusharchaudhari"
                 status="Available for work"
                 contactText="Contact Me"
-                avatarUrl="/public/image.png"
+                avatarUrl="public/image.png"
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
