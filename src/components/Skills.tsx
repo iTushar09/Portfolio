@@ -36,7 +36,7 @@ const programmingLanguages: Skill[] = [
     proficiency: "Advanced",
   },
   {
-    name: "JavaScript",
+    name: "HTML/CSS",
     percentage: 70,
     icon: "🚀",
     color: "from-yellow-400 to-orange-500",

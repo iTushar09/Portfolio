@@ -1,9 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Sun, Moon } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(true);
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+    localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+  };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDark(savedTheme === 'dark');
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,8 +85,19 @@ const Header: React.FC = () => {
             ))}
           </div>
 
-          {/* Social Links - Desktop */}
+          {/* Theme Toggle & Social Links - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-gray-400 hover:text-white hover:bg-purple-900/30 rounded-full transition-all duration-300 relative overflow-hidden group"
+              aria-label="Toggle theme"
+            >
+              <div className="relative">
+                <Sun className={`w-5 h-5 transition-all duration-300 ${isDark ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`} />
+                <Moon className={`w-5 h-5 absolute inset-0 transition-all duration-300 ${isDark ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`} />
+              </div>
+            </button>
+            <div className="w-px h-6 bg-purple-500/30"></div>
             {socialLinks.map((social) => (
               <a
                 key={social.href}

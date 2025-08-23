@@ -1,3 +1,4 @@
+
 import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -7,7 +8,7 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import BackgroundParticles from "./components/BackgroundParticles";
+import Particles from "./components/Particles";
 
 const App: React.FC = () => {
   return (
@@ -16,8 +17,19 @@ const App: React.FC = () => {
       role="main"
       aria-label="Portfolio Application"
     >
-      {/* Background particle animation */}
-      <BackgroundParticles />
+      {/* OGL Particles Background */}
+      <div className="fixed inset-0 z-0">
+        <Particles
+          particleColors={['#8B5CF6', '#06B6D4', '#10B981', '#F59E0B']}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
 
       {/* Site header */}
       <Header />

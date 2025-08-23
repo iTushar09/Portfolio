@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ProfileCard from "./ProfileCard";
 import { Check } from "lucide-react";
 
 const skills = [
@@ -43,31 +44,16 @@ const About: React.FC = () => {
             </h2>
 
             <p className="text-gray-300 mb-4 text-justify">
-              I am an aspiring Electronics Engineer currently pursuing a B.Tech
-              in Electronics and Telecommunication Engineering at Shri Guru
-              Gobind Singhji Institute of Engineering and Technology, Nanded.
+              I am Tushar Chaudhari, an Electronics and Telecommunication Engineering student pursuing my B.Tech at Shri Guru Gobind Singhji Institute of Engineering and Technology, Nanded, with a current CGPA of 7.1/10.
             </p>
             <p className="text-gray-300 mb-4 text-justify">
-              My expertise includes electronic circuit design, PCB design, and
-              microcontroller programming. I have hands-on experience using
-              tools such as KiCad, MATLAB, Keil uVision, Proteus, LTspice,
-              oscilloscopes, digital multimeters (DMM) and function generators.
-              I’m proficient in C, C++, and Python, and have developed several
-              embedded and machine learning projects—ranging from an
-              Arduino-based digital ohmmeter to a telecom customer churn
-              prediction model.
+              My skills span embedded systems, AI, and machine learning with hands-on experience in C, C++, Python, circuit design, and microcontroller programming. I have completed internships in embedded systems and artificial intelligence, contributing to real-time industrial applications and telecom user behavior predictive models.
             </p>
             <p className="text-gray-300 mb-6 text-justify">
-              My passion is in bridging hardware and software to develop
-              practical, innovative solutions. I’ve contributed to projects
-              ranging from Arduino-based instruments to telecom-focused ML
-              models, and I’m particularly eager to contribute to R&D
-              environments that challenge me to grow as an engineer.
+              Some noteworthy projects I worked on include a <strong>Smart Home Automation System</strong> with ESP32 and sensor integration, an <strong>IoT-Based Bidirectional Visitor Counter</strong> using Arduino and IR sensors, and a <strong>Telecom Customer Churn Prediction model</strong> built with machine learning techniques. I am passionate about bridging hardware and software for innovative and practical solutions.
             </p>
             <p className="text-gray-300 mb-4 text-justify">
-              Outside of my technical pursuits, I enjoy dance choreography,
-              music, movies, and continually expanding my perspective through
-              both technical and general reading.
+              Beyond technology, I engage in dance choreography, music, and reading to keep my creativity and perspective broad.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
@@ -81,7 +67,7 @@ const About: React.FC = () => {
             </div>
           </motion.article>
 
-          {/* Image Section */}
+          {/* 3D Profile Card Section */}
           <motion.div
             {...{
               initial: { opacity: 0, x: -80 },
@@ -91,28 +77,30 @@ const About: React.FC = () => {
             }}
             className="w-full md:w-1/2 order-1 md:order-2 flex items-center justify-center"
           >
-            <div className="relative w-full h-full max-w-[500px] max-h-[800px]">
+            <div className="relative w-full h-full max-w-[500px] max-h-[800px] flex items-center justify-center">
               {/* Floating decorative circles */}
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
               <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-teal-500/20 rounded-full blur-lg animate-pulse delay-1000"></div>
 
-              <div className="rounded-2xl overflow-hidden border border-purple-500/20 shadow-2xl shadow-purple-500/10 relative backdrop-blur-sm bg-gradient-to-br from-purple-900/20 to-teal-900/20 h-full">
-                <div className="p-8 md:p-12 h-full flex items-center justify-center">
-                  <div className="relative w-72 h-72 md:w-80 md:h-80">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 rounded-2xl blur-sm opacity-60 animate-pulse"></div>
-                    <img
-                       src="public/image.png"
-                      alt="Tushar Chaudhri"
-                      className="relative w-full h-full object-cover rounded-2xl border-2 border-purple-400/50 shadow-xl z-10"
-                    />
-                    <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/20 to-teal-600/20 rounded-2xl blur-md"></div>
-                  </div>
+              <ProfileCard
+                name="Tushar Chaudhari"
+                title="Electronics Engineer"
+                handle="iTushar09"
+                status="Available for work"
+                contactText="Contact Me"
+                avatarUrl="/public/image.png"
+                showUserInfo={true}
+                enableTilt={true}
+                enableMobileTilt={false}
+                onContactClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
+                }}
+              />
 
-                  {/* Decorative pings */}
-                  <div className="absolute top-4 right-4 w-3 h-3 bg-teal-400 rounded-full animate-ping"></div>
-                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-purple-400 rounded-full animate-ping delay-500"></div>
-                </div>
-              </div>
+              {/* Decorative pings */}
+              <div className="absolute top-4 right-4 w-3 h-3 bg-teal-400 rounded-full animate-ping"></div>
+              <div className="absolute bottom-4 left-4 w-2 h-2 bg-purple-400 rounded-full animate-ping delay-500"></div>
             </div>
           </motion.div>
         </div>
